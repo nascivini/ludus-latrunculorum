@@ -42,15 +42,15 @@ public class MainScreen extends javax.swing.JFrame {
     private void initializeBoard() {
         jPanel1.setLayout(new GridBagLayout());
         jPanel1.setBackground(new Color(82, 0, 106));
-        for (var i = 0; i < 8; i++) {
-            for (var j = 0; j < 12; j++) {
+        for (int i = 0; i < 8; i++) {
+            for (int j = 0; j < 12; j++) {
                 LabelPiece label = new LabelPiece();
                 label.setName(i + "-" + j);
                 label.setPreferredSize(BOARD_PIECE_DIMENSION);
                 label.setBackground(Color.BLUE);
                 label.setBorder(BorderFactory.createLineBorder(Color.WHITE, 1));
 
-                var constraints = new GridBagConstraints();
+                GridBagConstraints constraints = new GridBagConstraints();
                 constraints.gridx = j;
                 constraints.gridy = i;
                 jPanel1.add(label, constraints);
@@ -61,8 +61,8 @@ public class MainScreen extends javax.swing.JFrame {
 
     private void putPiecesOnBoard() {
         for (LabelPiece label : labels) {
-            var line = label.getName().split("-")[0];
-            var column = label.getName().split("-")[1];
+            String line = label.getName().split("-")[0];
+            String column = label.getName().split("-")[1];
             if (line.equals("0")) {
                 label.paintComponentWithCircleBlack();
             } else if (line.equals("1") && column.equals("5")) {

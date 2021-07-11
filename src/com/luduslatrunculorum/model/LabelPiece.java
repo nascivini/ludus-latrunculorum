@@ -16,7 +16,7 @@ import javax.swing.JLabel;
 public class LabelPiece extends JLabel {
 
     public void paintComponentWithCircleWhite() {
-        var g = this.getGraphics();
+        Graphics g = this.getGraphics();
         super.paintComponent(g);
         g.setColor(Color.WHITE);
         g.drawOval(5, 5, 60, 60);
@@ -24,7 +24,7 @@ public class LabelPiece extends JLabel {
     }
     
     public void paintComponentWithCircleBlack() {
-        var g = this.getGraphics();
+        Graphics g = this.getGraphics();
         super.paintComponent(g);
         g.setColor(Color.BLACK);
         g.drawOval(5, 5, 60, 60);
@@ -32,7 +32,7 @@ public class LabelPiece extends JLabel {
     }
     
     public void repaintComponent(){
-        var g = this.getGraphics();
+        Graphics g = this.getGraphics();
         super.paintComponent(g);
     }
 

@@ -17,7 +17,7 @@ public class LudusLatrunculorum {
      * @param args the command line arguments
      */
     public static void main(String[] args) {
-        var mainController = new MainController();
+        MainController mainController = new MainController();
     }
     
 }
