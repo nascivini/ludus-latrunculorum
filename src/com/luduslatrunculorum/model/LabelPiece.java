@@ -31,7 +31,7 @@ public class LabelPiece extends JLabel {
         g.fillOval(5, 5, 60, 60);
     }
     
-    public void repaint(){
+    public void repaintComponent(){
         var g = this.getGraphics();
         super.paintComponent(g);
     }
